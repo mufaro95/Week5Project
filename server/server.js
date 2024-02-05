@@ -23,7 +23,7 @@ app.listen(PORT, () => {
 app.post("/scoreBoard", (req, res) => {
   try {
     const username = req.body.username;
-    const score = req.body.message;
+    const score = req.body.score;
     const newScore = db
       .prepare(`INSERT INTO scoreBoard (username, score) VALUES(?, ?)`)
       .run(username, score);

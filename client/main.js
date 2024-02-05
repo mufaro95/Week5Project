@@ -1,14 +1,3 @@
-// SET UP
-
-import express from "express";
-import cors from "cors";
-import Database from "better-sqlite3";
-
-const app = express();
-app.use(cors());
-app.use(express.json());
-const db = new Database("database.db");
-
 // setting up consts
 const playButton = document.getElementsByClassName("start-game-button");
 const playerScore = document.getElementsByClassName("player-score");
