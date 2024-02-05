@@ -1,4 +1,5 @@
 // Set up for server side
+app.disable('x-powered-by')
 
 import express from "express";
 import cors from "cors";
@@ -41,3 +42,4 @@ app.get("/scoreBoard", (req, res) => {
     res.status(500).json(err);
   }
 });
+
