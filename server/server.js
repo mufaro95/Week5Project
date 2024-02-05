@@ -16,6 +16,8 @@ app.listen(PORT, () => {
   console.log(`Server is live on port: http://localhost:${PORT}}`);
 });
 
+//test
+
 // Creating GET and POST so we can test database
 
 // POST
