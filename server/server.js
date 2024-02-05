@@ -11,7 +11,7 @@ const db = new Database("database.db");
 
 const PORT = "2020";
 app.listen(PORT, () => {
-  console.log(`Server is live on port: ${PORT}`);
+  console.log(`Server is live on port: http://localhost:${PORT}}`);
 });
 
 // Creating GET and POST so we can test database
