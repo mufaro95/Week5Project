@@ -1,6 +1,5 @@
 // Set up for server side
 
-//
 import express from "express";
 import cors from "cors";
 import Database from "better-sqlite3";
@@ -20,7 +19,7 @@ app.listen(PORT, () => {
 // Creating GET and POST so we can test database
 
 // POST
-
+// POST request: username and score data to be sent to database. username and score data taken from game play
 app.post("/scoreBoard", (req, res) => {
   try {
     const username = req.body.username;
@@ -35,7 +34,7 @@ app.post("/scoreBoard", (req, res) => {
 });
 
 //GET
-
+// GET request: username and score to be taken from database - to be displayed on leader board
 app.get("/scoreBoard", (req, res) => {
   try {
     let scoreBoard = db.prepare(`SELECT * FROM scoreBoard`).all();
