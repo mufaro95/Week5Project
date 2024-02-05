@@ -1,7 +1,6 @@
 // Set up for server side
-app.disable('x-powered-by')
 
-// 
+//
 import express from "express";
 import cors from "cors";
 import Database from "better-sqlite3";
@@ -13,7 +12,7 @@ const db = new Database("database.db");
 
 const PORT = "2020";
 app.listen(PORT, () => {
-  console.log(`Server is live on port: http://localhost:${PORT}}`);
+  console.log(`Server is live on port: ${PORT}`);
 });
 
 //test
@@ -45,4 +44,3 @@ app.get("/scoreBoard", (req, res) => {
     res.status(500).json(err);
   }
 });
-
